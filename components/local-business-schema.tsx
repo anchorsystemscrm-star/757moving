@@ -16,7 +16,7 @@ export function LocalBusinessSchema() {
     "@type": "MovingCompany",
     name: siteConfig.name,
     url: siteConfig.url,
-    telephone: "+1-757-555-0187",
+    telephone: "+1-757-704-5118",
     email: siteConfig.email,
     description: siteConfig.description,
     priceRange: "$$",
@@ -58,4 +58,3 @@ export function LocalBusinessSchema() {
     />
   );
 }
-

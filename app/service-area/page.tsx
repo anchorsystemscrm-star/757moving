@@ -21,7 +21,7 @@ export default function ServiceAreaPage() {
       <PageHero
         description="We focus on the Hampton Roads and 757 region so clients get faster scheduling, better route awareness, and local crews that understand the area."
         eyebrow="Service Area"
-        primaryCta={{ label: "Get a Free Quote", href: "/quote-request" }}
+        primaryCta={{ label: "Get Free Quote", href: "/quote-request" }}
         secondaryCta={{ label: `Call ${siteConfig.phoneDisplay}`, href: siteConfig.phoneHref }}
         title="Professional movers across Virginia Beach, Norfolk, Chesapeake, Portsmouth, and Suffolk"
       />
@@ -75,4 +75,3 @@ export default function ServiceAreaPage() {
     </>
   );
 }
-

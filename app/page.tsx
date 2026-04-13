@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { ActionLink } from "@/components/action-link";
 import { FaqSchema } from "@/components/faq-schema";
+import { HomeLeadForm } from "@/components/home-lead-form";
 import { SectionHeading } from "@/components/section-heading";
 import { buildMetadata, faqItems, services, siteConfig, testimonials } from "@/lib/site";
 
@@ -19,15 +20,15 @@ const stats = [
 ] as const;
 
 const trustPoints = [
-  "Licensed, reliable local crews",
-  "Fast quote turnaround and clear communication",
-  "Flexible scheduling for short-notice moves"
+  "Same-Day Availability",
+  "Fast Quote Turnaround",
+  "Apartments, Homes & Short-Notice Moves"
 ] as const;
 
 const whyChooseUs = [
-  "Easy booking and responsive follow-up",
-  "Organized, respectful crews that protect your home",
-  "Local route knowledge across Hampton Roads",
+  "Local crews that know Hampton Roads routes and pacing",
+  "Clear communication from first call to final unload",
+  "Flexible scheduling for urgent and short-notice moves",
   "Straightforward service built around speed and trust"
 ] as const;
 
@@ -73,14 +74,14 @@ export default function HomePage() {
               Premium local movers in Hampton Roads
             </p>
             <h1 className="mt-5 text-5xl font-semibold tracking-tight sm:text-6xl">
-              Fast, Reliable Movers in the 757 Area
+              Local Movers in Hampton Roads — Fast Quotes, Reliable Crews, Short-Notice Availability
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">
-              Book trusted local movers for apartments, homes, and short-notice
-              moves across Hampton Roads.
+              Book trusted local movers for apartments, homes, and same-day moves
+              across the 757.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ActionLink href="/quote-request">Get a Free Quote</ActionLink>
+              <ActionLink href="/quote-request">Get Free Quote</ActionLink>
               <ActionLink href={siteConfig.phoneHref} variant="secondary">
                 Call Now
               </ActionLink>
@@ -106,11 +107,14 @@ export default function HomePage() {
       <section className="border-b border-slate-200 bg-white py-5">
         <div className="container-shell grid gap-4 sm:grid-cols-3">
           {trustPoints.map((item) => (
-            <div key={item} className="flex items-center gap-3 rounded-2xl bg-slate-50 px-4 py-4">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#123a72] text-sm font-semibold text-white">
+            <div
+              key={item}
+              className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4"
+            >
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#0f4fae] text-sm font-semibold text-white">
                 ✓
               </span>
-              <p className="text-sm font-medium text-slate-700">{item}</p>
+              <p className="text-sm font-semibold text-slate-800">{item}</p>
             </div>
           ))}
         </div>
@@ -134,6 +138,12 @@ export default function HomePage() {
               <p className="mt-3 text-sm leading-7 text-slate-600">{service.details}</p>
             </article>
           ))}
+        </div>
+        <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <ActionLink href="/quote-request">Get Free Quote</ActionLink>
+          <ActionLink href={siteConfig.phoneHref} variant="secondary">
+            Call Now
+          </ActionLink>
         </div>
       </section>
 
@@ -187,6 +197,47 @@ export default function HomePage() {
               src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80"
               width={960}
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-slate-200 bg-white py-20">
+        <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <SectionHeading
+              eyebrow="Fast Quote Form"
+              title="Get pricing started without a long form"
+              description="If you just want a quick callback, send the basics here and we will reach out fast. Great for same-day moves, local apartments, and short-notice scheduling."
+            />
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              <div className="small-card p-5">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2c74d8]">
+                  Local crews
+                </p>
+                <p className="mt-3 text-sm leading-7 text-slate-600">
+                  Movers who know the 757 area and show up ready to work.
+                </p>
+              </div>
+              <div className="small-card p-5">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2c74d8]">
+                  Clear communication
+                </p>
+                <p className="mt-3 text-sm leading-7 text-slate-600">
+                  Fast follow-up, realistic timing, and straightforward next steps.
+                </p>
+              </div>
+              <div className="small-card p-5">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2c74d8]">
+                  Flexible scheduling
+                </p>
+                <p className="mt-3 text-sm leading-7 text-slate-600">
+                  Built for homes, apartments, and urgent local moves.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <HomeLeadForm />
           </div>
         </div>
       </section>
@@ -266,15 +317,15 @@ export default function HomePage() {
           <div className="mt-4 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-                Get your quote and lock in dependable local movers.
+                Ready to book your move?
               </h2>
               <p className="mt-4 text-base leading-7 text-slate-300">
-                Call now for fast scheduling or send a quote request in under two
-                minutes.
+                Call now for immediate scheduling help or send a quote request and
+                get the process moving fast.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <ActionLink href="/quote-request">Get a Free Quote</ActionLink>
+              <ActionLink href="/quote-request">Get Free Quote</ActionLink>
               <ActionLink href={siteConfig.phoneHref} variant="secondary">
                 Call Now
               </ActionLink>
@@ -285,4 +336,3 @@ export default function HomePage() {
     </>
   );
 }
-

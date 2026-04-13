@@ -19,7 +19,7 @@ export function SiteFooter() {
             homes, same-day requests, and loading help that keeps the day on track.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <ActionLink href="/quote-request">Get a Free Quote</ActionLink>
+            <ActionLink href="/quote-request">Get Free Quote</ActionLink>
             <ActionLink href={siteConfig.phoneHref} variant="secondary">
               {siteConfig.phoneDisplay}
             </ActionLink>
@@ -71,4 +71,3 @@ export function SiteFooter() {
     </footer>
   );
 }
-

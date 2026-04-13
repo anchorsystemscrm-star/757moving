@@ -7,10 +7,10 @@ export const siteConfig = {
   defaultTitle: "757 Moving | Fast, Reliable Movers in Hampton Roads",
   description:
     "Premium local movers for Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, and the wider 757 area. Fast scheduling, professional crews, and quote requests built for speed.",
-  phoneDisplay: "(757) 555-0187",
-  phoneHref: "tel:+17575550187",
-  email: "hello@757moving.com",
-  emailHref: "mailto:hello@757moving.com",
+  phoneDisplay: "(757) 704-5118",
+  phoneHref: "tel:+17577045118",
+  email: "757moving@gmail.com",
+  emailHref: "mailto:757moving@gmail.com",
   hours: [
     { day: "Monday", opens: "07:00", closes: "20:00" },
     { day: "Tuesday", opens: "07:00", closes: "20:00" },
@@ -92,22 +92,22 @@ export const services = [
 
 export const testimonials = [
   {
-    name: "Alyssa R.",
+    name: "Jessica R.",
     location: "Virginia Beach",
     quote:
-      "Fast response, clean truck, polite crew, and zero surprises. They made our apartment move feel effortless."
+      "We needed apartment movers fast in Virginia Beach and they actually communicated the whole way through. The crew showed up ready, moved quickly, and kept it straightforward."
   },
   {
-    name: "Marcus T.",
+    name: "Marcus D.",
     location: "Norfolk",
     quote:
-      "We booked on short notice and still got professional communication the whole way through. Exactly the kind of mover you hope to find."
+      "Booked on short notice in Norfolk and the experience felt organized from the first call. Clear communication, local crew, and no runaround."
   },
   {
-    name: "Danielle P.",
+    name: "Tanya P.",
     location: "Chesapeake",
     quote:
-      "They moved our family home carefully, worked efficiently, and stayed calm on a long day. I would call them again without hesitation."
+      "They handled our Chesapeake home move carefully and stayed flexible when timing shifted. It felt like working with professionals who know the 757."
   }
 ] as const;
 
@@ -218,4 +218,3 @@ export function buildMetadata({
     }
   };
 }
-

@@ -18,9 +18,9 @@ const baseStyles =
 
 const variantStyles: Record<NonNullable<ActionLinkProps["variant"]>, string> = {
   primary:
-    "bg-[#123a72] text-white shadow-[0_18px_40px_rgba(18,58,114,0.18)] hover:-translate-y-0.5 hover:bg-[#0f315f]",
+    "bg-[#0f4fae] text-white shadow-[0_20px_44px_rgba(15,79,174,0.28)] hover:-translate-y-0.5 hover:bg-[#0c428f]",
   secondary:
-    "border border-slate-200 bg-white text-slate-900 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-slate-50",
+    "border border-white/70 bg-white text-slate-950 shadow-[0_12px_28px_rgba(15,23,42,0.12)] hover:-translate-y-0.5 hover:border-slate-300 hover:bg-slate-50",
   ghost: "text-slate-700 hover:text-slate-950"
 };
 
@@ -53,4 +53,3 @@ export function ActionLink({
     </Link>
   );
 }
-
