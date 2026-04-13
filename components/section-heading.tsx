@@ -21,11 +21,11 @@ export function SectionHeading({
       ].join(" ")}
     >
       {eyebrow ? (
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#2c74d8]">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#2568c2]">
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+      <h2 className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl sm:leading-tight">
         {title}
       </h2>
       {description ? (
@@ -36,4 +36,3 @@ export function SectionHeading({
     </div>
   );
 }
-

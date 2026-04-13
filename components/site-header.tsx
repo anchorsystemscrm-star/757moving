@@ -15,7 +15,7 @@ export function SiteHeader() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-white/88 backdrop-blur-xl">
-      <div className="container-shell flex h-[72px] items-center justify-between gap-4 py-4">
+      <div className="container-shell flex h-[74px] items-center justify-between gap-4 py-4">
         <Link
           className="flex items-center"
           href="/"
@@ -24,11 +24,11 @@ export function SiteHeader() {
           <Image
             src="/757moving-logo.png"
             alt="757 Moving logo"
-            width={160}
-            height={50}
+            width={148}
+            height={46}
             priority
-            sizes="(max-width: 640px) 132px, (max-width: 1024px) 148px, 160px"
-            className="h-auto w-[132px] object-contain sm:w-[148px] lg:w-[160px]"
+            sizes="(max-width: 640px) 124px, (max-width: 1024px) 138px, 148px"
+            className="h-auto w-[124px] object-contain sm:w-[138px] lg:w-[148px]"
           />
         </Link>
 

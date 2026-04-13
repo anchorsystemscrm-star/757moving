@@ -7,19 +7,19 @@ import { siteConfig } from "@/lib/site";
 export function SiteFooter() {
   return (
     <footer className="border-t border-slate-200 bg-slate-950 text-slate-200">
-      <div className="container-shell grid gap-12 py-14 lg:grid-cols-[1.3fr_0.8fr_0.9fr]">
+      <div className="container-shell grid gap-12 py-14 lg:grid-cols-[1.15fr_0.85fr_0.9fr]">
         <div className="max-w-md">
           <Link className="inline-flex items-center" href="/">
             <Image
               src="/757moving-logo.png"
               alt="757 Moving logo"
-              width={140}
-              height={45}
-              sizes="140px"
-              className="mb-4 h-auto w-[132px] object-contain sm:w-[140px]"
+              width={118}
+              height={36}
+              sizes="118px"
+              className="mb-4 h-auto w-[110px] object-contain sm:w-[118px]"
             />
           </Link>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white">
+          <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white sm:text-[1.9rem]">
             Local movers built for speed, trust, and clean communication.
           </h2>
           <p className="mt-4 text-sm leading-7 text-slate-400">
@@ -56,7 +56,7 @@ export function SiteFooter() {
 
         <div>
           <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-[#7fb0ff]">
-            Service Area
+            Contact & Area
           </h3>
           <ul className="mt-5 space-y-3 text-sm text-slate-300">
             {siteConfig.serviceAreas.map((city) => (

@@ -14,15 +14,18 @@ export const metadata = buildMetadata({
 });
 
 const stats = [
-  { label: "Fast scheduling", value: "Same-day and next-day options" },
-  { label: "Service area", value: "Virginia Beach to Suffolk" },
-  { label: "Crew standard", value: "Professional local movers" }
+  { label: "Fast response", value: "Usually within minutes during business hours" },
+  { label: "Availability", value: "Same-day and next-day scheduling options" },
+  { label: "Coverage", value: "Virginia Beach, Norfolk, Chesapeake, and more" }
 ] as const;
 
 const trustPoints = [
-  "Same-Day Availability",
+  "Same-Day & Next-Day Availability",
   "Fast Quote Turnaround",
-  "Apartments, Homes & Short-Notice Moves"
+  "Apartments, Homes & Short-Notice Moves",
+  "Local 757 Crews",
+  "Clear Communication",
+  "Fast Scheduling"
 ] as const;
 
 const whyChooseUs = [
@@ -68,41 +71,50 @@ export default function HomePage() {
           <div className="hero-shade absolute inset-0" />
         </div>
 
-        <div className="container-shell relative z-10 flex min-h-[82svh] items-center py-16">
+        <div className="container-shell relative z-10 flex min-h-[80svh] items-center py-16">
           <div className="max-w-3xl text-white">
-            <div className="inline-flex rounded-2xl border border-white/15 bg-white/10 px-4 py-3 shadow-[0_20px_40px_rgba(15,23,42,0.18)] backdrop-blur-md">
-              <Image
-                src="/757moving-logo.png"
-                alt="757 Moving logo"
-                width={164}
-                height={52}
-                priority
-                sizes="(max-width: 640px) 136px, 164px"
-                className="h-auto w-[136px] object-contain sm:w-[164px]"
-              />
-            </div>
-            <p className="mt-6 text-sm font-semibold uppercase tracking-[0.26em] text-[#b8d2ff]">
+            <p className="text-sm font-semibold uppercase tracking-[0.26em] text-[#b8d2ff]">
               Local moving across Virginia Beach, Norfolk, and the 757
             </p>
             <h1 className="mt-5 text-5xl font-semibold tracking-tight sm:text-6xl">
-              Local Movers in Hampton Roads — Fast Quotes, Reliable Crews, Short-Notice Availability
+              Fast, Reliable Movers in the 757 — Get a Quote in Minutes
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">
-              Book trusted local movers for apartments, homes, and same-day moves
-              across the 757.
+              Same-day and next-day moves available. Book trusted local movers for
+              apartments, homes, and short-notice moves across Hampton Roads.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ActionLink href="/quote-request">Get Free Quote</ActionLink>
-              <ActionLink href={siteConfig.phoneHref} variant="secondary">
-                Call Now
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <ActionLink className="sm:min-w-[220px]" href="/quote-request">
+                Get My Moving Quote
               </ActionLink>
+              <ActionLink
+                className="border-white/16 bg-white/10 text-white shadow-[0_16px_36px_rgba(8,18,35,0.22)] hover:border-white/24 hover:bg-white/14 hover:text-white sm:min-w-[220px]"
+                href={siteConfig.phoneHref}
+                variant="secondary"
+              >
+                Call Now (Fastest Response)
+              </ActionLink>
+            </div>
+            <div className="badge-row mt-5">
+              <span className="trust-pill">
+                <span className="trust-pill-dot" />
+                Fast response
+              </span>
+              <span className="trust-pill">
+                <span className="trust-pill-dot" />
+                Same-day / next-day availability
+              </span>
+              <span className="trust-pill">
+                <span className="trust-pill-dot" />
+                Local crews across the 757
+              </span>
             </div>
 
             <div className="mt-10 grid gap-3 sm:grid-cols-3">
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="rounded-2xl border border-white/15 bg-white/8 px-4 py-4 backdrop-blur-md"
+                  className="rounded-2xl border border-white/14 bg-white/8 px-4 py-4 backdrop-blur-md"
                 >
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#b8d2ff]">
                     {stat.label}
@@ -115,23 +127,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="warm-section border-b border-slate-200 py-5">
-        <div className="container-shell grid gap-4 sm:grid-cols-3">
-          {trustPoints.map((item) => (
-            <div
-              key={item}
-              className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-[rgba(255,250,243,0.86)] px-4 py-4"
-            >
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#0f4fae] text-sm font-semibold text-white">
-                ✓
-              </span>
-              <p className="text-sm font-semibold text-slate-800">{item}</p>
+      <section className="warm-section border-b border-slate-200 py-7">
+        <div className="container-shell">
+          <div className="small-card bg-[linear-gradient(180deg,_rgba(255,252,248,0.98)_0%,_rgba(245,237,227,0.98)_100%)] p-4 sm:p-5">
+            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-6">
+              {trustPoints.map((item) => (
+                <div
+                  key={item}
+                  className="flex min-h-[76px] items-center gap-3 rounded-[18px] border border-slate-200/90 bg-white/80 px-4 py-4"
+                >
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#1d5daf] text-sm font-semibold text-white shadow-[0_12px_24px_rgba(29,93,175,0.24)]">
+                    ✓
+                  </span>
+                  <p className="text-sm font-semibold leading-6 text-slate-800">{item}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
-      <section className="tint-section border-y border-slate-200 py-20">
+      <section className="tint-section border-y border-slate-200 py-24">
         <div className="container-shell">
           <SectionHeading
             eyebrow="Services"
@@ -140,7 +156,10 @@ export default function HomePage() {
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {services.map((service) => (
-              <article key={service.name} className="small-card p-6">
+              <article
+                key={service.name}
+                className="small-card bg-[linear-gradient(180deg,_rgba(255,252,248,0.96)_0%,_rgba(249,244,236,0.96)_100%)] p-6"
+              >
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2c74d8]">
                   {service.name}
                 </p>
@@ -160,7 +179,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-slate-200 bg-slate-950 py-20 text-white">
+      <section className="border-y border-slate-200 bg-slate-950 py-24 text-white">
         <div className="container-shell">
           <SectionHeading
             align="center"
@@ -185,7 +204,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="warm-section border-y border-slate-200 py-20">
+      <section className="warm-section border-y border-slate-200 py-24">
         <div className="container-shell">
           <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
             <div>
@@ -216,16 +235,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-slate-200 bg-[linear-gradient(180deg,_#fffaf4_0%,_#f7f1e8_100%)] py-20">
+      <section className="border-y border-slate-200 bg-[linear-gradient(180deg,_#fff8f1_0%,_#f2e9dd_100%)] py-24">
         <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <SectionHeading
               eyebrow="Fast Quote Form"
-              title="Get pricing started without a long form"
-              description="If you just want a quick callback, send the basics here and we will reach out fast. Great for same-day moves, local apartments, and short-notice scheduling."
+              title="Get Your Moving Quote — We’ll Reach Out Fast"
+              description="Send the basics and we’ll follow up quickly to help you price your move, confirm availability, and get the next step handled."
             />
+            <p className="mt-5 text-sm font-semibold text-[#184784]">
+              Fast response, usually within minutes during business hours.
+            </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              <div className="small-card p-5">
+              <div className="small-card bg-white/90 p-5">
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2c74d8]">
                   Local crews
                 </p>
@@ -233,7 +255,7 @@ export default function HomePage() {
                   Movers who know the 757 area and show up ready to work.
                 </p>
               </div>
-              <div className="small-card p-5">
+              <div className="small-card bg-white/90 p-5">
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2c74d8]">
                   Clear communication
                 </p>
@@ -241,7 +263,7 @@ export default function HomePage() {
                   Fast follow-up, realistic timing, and straightforward next steps.
                 </p>
               </div>
-              <div className="small-card p-5">
+              <div className="small-card bg-white/90 p-5">
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2c74d8]">
                   Flexible scheduling
                 </p>
@@ -257,7 +279,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="tint-section border-y border-slate-200 py-20">
+      <section className="tint-section border-y border-slate-200 py-24">
         <div className="container-shell">
           <SectionHeading
             eyebrow="Service Area"
@@ -282,7 +304,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="warm-section border-y border-slate-200 py-20">
+      <section className="warm-section border-y border-slate-200 py-24">
         <div className="container-shell">
           <SectionHeading
             align="center"
@@ -304,7 +326,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-slate-200 bg-[linear-gradient(180deg,_#fffdf8_0%,_#f7f2eb_100%)] py-20">
+      <section className="border-y border-slate-200 bg-[linear-gradient(180deg,_#fffdf8_0%,_#f4ede2_100%)] py-24">
         <div className="container-shell">
           <SectionHeading
             eyebrow="FAQ"
@@ -326,8 +348,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-shell py-20">
-        <div className="overflow-hidden rounded-[32px] bg-slate-950 px-6 py-10 text-white shadow-[0_32px_80px_rgba(15,23,42,0.18)] sm:px-10 sm:py-14">
+      <section className="container-shell py-24">
+        <div className="overflow-hidden rounded-[32px] bg-[linear-gradient(180deg,_#10233f_0%,_#0c1b33_100%)] px-6 py-10 text-white shadow-[0_32px_80px_rgba(15,23,42,0.18)] sm:px-10 sm:py-14">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#7fb0ff]">
             Ready when you are
           </p>

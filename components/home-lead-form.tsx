@@ -47,8 +47,24 @@ export function HomeLeadForm() {
   }
 
   return (
-    <form className="small-card p-6 sm:p-8" onSubmit={handleSubmit}>
-      <div className="grid gap-4 sm:grid-cols-2">
+    <form
+      className="small-card bg-[linear-gradient(180deg,_rgba(255,255,255,0.97)_0%,_rgba(251,245,236,0.96)_100%)] p-6 sm:p-8"
+      onSubmit={handleSubmit}
+    >
+      <div className="rounded-[20px] border border-slate-200/80 bg-white/80 p-5 shadow-[0_18px_40px_rgba(15,23,42,0.06)]">
+        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#2568c2]">
+          Fast follow-up
+        </p>
+        <h3 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">
+          Send the basics and we&apos;ll take it from there
+        </h3>
+        <p className="mt-3 text-sm leading-7 text-slate-600">
+          Usually a fast response during business hours. No long form here, just
+          the details we need to help price the move and confirm next steps.
+        </p>
+      </div>
+
+      <div className="mt-6 grid gap-4 sm:grid-cols-2">
         <div>
           <label className="mb-2 block text-sm font-semibold text-slate-900" htmlFor="lead-name">
             Name
@@ -121,8 +137,12 @@ export function HomeLeadForm() {
         disabled={isSubmitting}
         type="submit"
       >
-        {isSubmitting ? "Sending..." : "Get My Quote"}
+        {isSubmitting ? "Sending..." : "Get My Moving Quote"}
       </button>
+
+      <p className="mt-4 text-center text-sm text-slate-500">
+        Fast response, usually within minutes during business hours.
+      </p>
     </form>
   );
 }
