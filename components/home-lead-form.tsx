@@ -54,7 +54,7 @@ export function HomeLeadForm() {
             Name
           </label>
           <input
-            className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#0f4fae]"
+            className="field-control"
             id="lead-name"
             name="name"
             placeholder="Your name"
@@ -68,7 +68,7 @@ export function HomeLeadForm() {
             Phone
           </label>
           <input
-            className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#0f4fae]"
+            className="field-control"
             id="lead-phone"
             name="phone"
             placeholder="Best callback number"
@@ -82,7 +82,7 @@ export function HomeLeadForm() {
             Move Date
           </label>
           <input
-            className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#0f4fae]"
+            className="field-control"
             id="lead-date"
             name="moveDate"
             type="date"
@@ -94,7 +94,7 @@ export function HomeLeadForm() {
             Short message
           </label>
           <textarea
-            className="min-h-28 w-full rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-[#0f4fae]"
+            className="textarea-control min-h-28"
             id="lead-message"
             name="message"
             placeholder="Apartment, home, same-day move, service area, or anything we should know"
@@ -117,7 +117,7 @@ export function HomeLeadForm() {
       ) : null}
 
       <button
-        className="mt-6 inline-flex h-12 w-full items-center justify-center rounded-lg bg-[#0f4fae] px-5 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(15,79,174,0.25)] transition hover:bg-[#0c428f] disabled:cursor-not-allowed disabled:opacity-70"
+        className="button-base button-primary mt-6 w-full"
         disabled={isSubmitting}
         type="submit"
       >
@@ -126,4 +126,3 @@ export function HomeLeadForm() {
     </form>
   );
 }
-

@@ -104,12 +104,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-slate-200 bg-white py-5">
+      <section className="warm-section border-b border-slate-200 py-5">
         <div className="container-shell grid gap-4 sm:grid-cols-3">
           {trustPoints.map((item) => (
             <div
               key={item}
-              className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4"
+              className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-[rgba(255,250,243,0.86)] px-4 py-4"
             >
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#0f4fae] text-sm font-semibold text-white">
                 ✓
@@ -120,30 +120,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-shell py-20">
-        <SectionHeading
-          eyebrow="Services"
-          title="Local moving services built for busy households and short timelines"
-          description="Every service is designed to remove friction, speed up scheduling, and keep your move feeling organized from the first call."
-        />
-        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {services.map((service) => (
-            <article key={service.name} className="small-card p-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2c74d8]">
-                {service.name}
-              </p>
-              <p className="mt-4 text-lg font-semibold tracking-tight text-slate-950">
-                {service.blurb}
-              </p>
-              <p className="mt-3 text-sm leading-7 text-slate-600">{service.details}</p>
-            </article>
-          ))}
-        </div>
-        <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-          <ActionLink href="/quote-request">Get Free Quote</ActionLink>
-          <ActionLink href={siteConfig.phoneHref} variant="secondary">
-            Call Now
-          </ActionLink>
+      <section className="tint-section border-y border-slate-200 py-20">
+        <div className="container-shell">
+          <SectionHeading
+            eyebrow="Services"
+            title="Local moving services built for busy households and short timelines"
+            description="Every service is designed to remove friction, speed up scheduling, and keep your move feeling organized from the first call."
+          />
+          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {services.map((service) => (
+              <article key={service.name} className="small-card p-6">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2c74d8]">
+                  {service.name}
+                </p>
+                <p className="mt-4 text-lg font-semibold tracking-tight text-slate-950">
+                  {service.blurb}
+                </p>
+                <p className="mt-3 text-sm leading-7 text-slate-600">{service.details}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <ActionLink href="/quote-request">Get Free Quote</ActionLink>
+            <ActionLink href={siteConfig.phoneHref} variant="secondary">
+              Call Now
+            </ActionLink>
+          </div>
         </div>
       </section>
 
@@ -172,36 +174,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-shell py-20">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
-          <div>
-            <SectionHeading
-              eyebrow="Why Choose Us"
-              title="A premium moving experience without the usual friction"
-              description="757 Moving is built around the parts clients care about most: fast answers, dependable arrival windows, respectful crews, and a move that feels professionally managed."
-            />
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {whyChooseUs.map((item) => (
-                <div key={item} className="small-card p-5">
-                  <p className="text-base font-semibold text-slate-900">{item}</p>
-                </div>
-              ))}
+      <section className="warm-section border-y border-slate-200 py-20">
+        <div className="container-shell">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+            <div>
+              <SectionHeading
+                eyebrow="Why Choose Us"
+                title="A premium moving experience without the usual friction"
+                description="757 Moving is built around the parts clients care about most: fast answers, dependable arrival windows, respectful crews, and a move that feels professionally managed."
+              />
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {whyChooseUs.map((item) => (
+                  <div key={item} className="small-card p-5">
+                    <p className="text-base font-semibold text-slate-900">{item}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="relative overflow-hidden rounded-[28px] border border-slate-200 shadow-[0_30px_80px_rgba(15,23,42,0.12)]">
-            <Image
-              alt="Packed boxes in a bright home ready for moving day"
-              className="h-full w-full object-cover"
-              height={820}
-              sizes="(min-width: 1024px) 42rem, 100vw"
-              src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80"
-              width={960}
-            />
+            <div className="relative overflow-hidden rounded-[28px] border border-slate-200 shadow-[0_30px_80px_rgba(15,23,42,0.12)]">
+              <Image
+                alt="Packed boxes in a bright home ready for moving day"
+                className="h-full w-full object-cover"
+                height={820}
+                sizes="(min-width: 1024px) 42rem, 100vw"
+                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80"
+                width={960}
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="border-y border-slate-200 bg-white py-20">
+      <section className="border-y border-slate-200 bg-[linear-gradient(180deg,_#fffaf4_0%,_#f7f1e8_100%)] py-20">
         <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <SectionHeading
@@ -242,7 +246,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-slate-200 bg-[#f8fbff] py-20">
+      <section className="tint-section border-y border-slate-200 py-20">
         <div className="container-shell">
           <SectionHeading
             eyebrow="Service Area"
@@ -267,27 +271,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-shell py-20">
-        <SectionHeading
-          align="center"
-          eyebrow="Testimonials"
-          title="Trusted by local clients who needed movers to show up and deliver"
-          description="The work matters, but so does how the day feels. Clear communication and calm execution are part of the service."
-        />
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
-          {testimonials.map((testimonial) => (
-            <article key={testimonial.name} className="small-card p-6">
-              <p className="text-base leading-8 text-slate-700">“{testimonial.quote}”</p>
-              <div className="mt-6 border-t border-slate-200 pt-5">
-                <p className="text-sm font-semibold text-slate-950">{testimonial.name}</p>
-                <p className="text-sm text-slate-500">{testimonial.location}</p>
-              </div>
-            </article>
-          ))}
+      <section className="warm-section border-y border-slate-200 py-20">
+        <div className="container-shell">
+          <SectionHeading
+            align="center"
+            eyebrow="Testimonials"
+            title="Trusted by local clients who needed movers to show up and deliver"
+            description="The work matters, but so does how the day feels. Clear communication and calm execution are part of the service."
+          />
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            {testimonials.map((testimonial) => (
+              <article key={testimonial.name} className="small-card p-6">
+                <p className="text-base leading-8 text-slate-700">“{testimonial.quote}”</p>
+                <div className="mt-6 border-t border-slate-200 pt-5">
+                  <p className="text-sm font-semibold text-slate-950">{testimonial.name}</p>
+                  <p className="text-sm text-slate-500">{testimonial.location}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="border-y border-slate-200 bg-white py-20">
+      <section className="border-y border-slate-200 bg-[linear-gradient(180deg,_#fffdf8_0%,_#f7f2eb_100%)] py-20">
         <div className="container-shell">
           <SectionHeading
             eyebrow="FAQ"

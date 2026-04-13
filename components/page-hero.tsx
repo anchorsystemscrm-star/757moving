@@ -22,7 +22,7 @@ export function PageHero({
   secondaryCta
 }: PageHeroProps) {
   return (
-    <section className="border-b border-slate-200/70 bg-[radial-gradient(circle_at_top_left,_rgba(44,116,216,0.12),_transparent_38%),linear-gradient(180deg,_#ffffff_0%,_#f8fbff_100%)] pt-28 pb-16 sm:pt-32 sm:pb-20">
+    <section className="border-b border-slate-200/70 bg-[radial-gradient(circle_at_top_left,_rgba(44,116,216,0.12),_transparent_34%),radial-gradient(circle_at_bottom_right,_rgba(196,160,112,0.14),_transparent_26%),linear-gradient(180deg,_#fffaf4_0%,_#f3f0ea_100%)] pt-28 pb-16 sm:pt-32 sm:pb-20">
       <div className="container-shell">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#2c74d8]">
@@ -51,4 +51,3 @@ export function PageHero({
     </section>
   );
 }
-

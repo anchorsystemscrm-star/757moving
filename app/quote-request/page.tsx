@@ -27,7 +27,7 @@ export default function QuoteRequestPage() {
         title="Start Your Moving Quote"
       />
 
-      <section className="container-shell py-20">
+      <section className="warm-section border-y border-slate-200 py-20">
         <div className="grid gap-8 lg:grid-cols-[1.02fr_0.98fr]">
           <div className="small-card p-8 sm:p-10">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#2c74d8]">
@@ -66,7 +66,7 @@ export default function QuoteRequestPage() {
               </ul>
             </div>
 
-            <div className="small-card p-7 sm:p-8">
+            <div className="small-card bg-[linear-gradient(180deg,_#fff8f0_0%,_#fbf1e6_100%)] p-7 sm:p-8">
               <h3 className="text-xl font-semibold text-slate-950">Best for a more accurate estimate</h3>
               <p className="mt-4 text-sm leading-7 text-slate-600">
                 Organized uploads help us review furniture, box count, stairs,

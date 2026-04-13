@@ -14,13 +14,11 @@ type ActionLinkProps = {
 };
 
 const baseStyles =
-  "inline-flex items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold tracking-[0.01em] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2c74d8]/30";
+  "button-base";
 
 const variantStyles: Record<NonNullable<ActionLinkProps["variant"]>, string> = {
-  primary:
-    "bg-[#0f4fae] text-white shadow-[0_20px_44px_rgba(15,79,174,0.28)] hover:-translate-y-0.5 hover:bg-[#0c428f]",
-  secondary:
-    "border border-white/70 bg-white text-slate-950 shadow-[0_12px_28px_rgba(15,23,42,0.12)] hover:-translate-y-0.5 hover:border-slate-300 hover:bg-slate-50",
+  primary: "button-primary",
+  secondary: "button-secondary",
   ghost: "text-slate-700 hover:text-slate-950"
 };
 

@@ -22,8 +22,8 @@ export default function ServicesPage() {
         title="Local moving services that feel polished from start to finish"
       />
 
-      <section className="container-shell py-20">
-        <div className="grid gap-5 lg:grid-cols-2">
+      <section className="warm-section border-y border-slate-200 py-20">
+        <div className="container-shell grid gap-5 lg:grid-cols-2">
           {services.map((service) => (
             <article key={service.name} className="small-card p-7 sm:p-8">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2c74d8]">
@@ -38,7 +38,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="border-y border-slate-200 bg-[#f8fbff] py-20">
+      <section className="tint-section border-y border-slate-200 py-20">
         <div className="container-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
             <SectionHeading
@@ -87,28 +87,29 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="container-shell py-20">
-        <SectionHeading
-          eyebrow="Popular Questions"
-          title="A few quick service answers"
-          description="The most common things clients ask before booking."
-        />
-        <div className="mt-10 grid gap-4">
-          {faqItems.slice(0, 3).map((item) => (
-            <div key={item.question} className="small-card p-6">
-              <h3 className="text-lg font-semibold text-slate-950">{item.question}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-600">{item.answer}</p>
-            </div>
-          ))}
-        </div>
-        <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-          <ActionLink href="/quote-request">Get My Quote</ActionLink>
-          <ActionLink href="/contact" variant="secondary">
-            Contact Us
-          </ActionLink>
+      <section className="warm-section border-y border-slate-200 py-20">
+        <div className="container-shell">
+          <SectionHeading
+            eyebrow="Popular Questions"
+            title="A few quick service answers"
+            description="The most common things clients ask before booking."
+          />
+          <div className="mt-10 grid gap-4">
+            {faqItems.slice(0, 3).map((item) => (
+              <div key={item.question} className="small-card p-6">
+                <h3 className="text-lg font-semibold text-slate-950">{item.question}</h3>
+                <p className="mt-3 text-sm leading-7 text-slate-600">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <ActionLink href="/quote-request">Get My Quote</ActionLink>
+            <ActionLink href="/contact" variant="secondary">
+              Contact Us
+            </ActionLink>
+          </div>
         </div>
       </section>
     </>
   );
 }
-

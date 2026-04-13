@@ -26,7 +26,8 @@ export async function POST(request: Request) {
     valueOf(formData, "preferredMoveDate"),
     valueOf(formData, "fromAddress"),
     valueOf(formData, "toAddress"),
-    valueOf(formData, "propertyType"),
+    valueOf(formData, "fromPropertyType"),
+    valueOf(formData, "toPropertyType"),
     valueOf(formData, "moveSize"),
     valueOf(formData, "stairs"),
     valueOf(formData, "elevator"),
@@ -66,7 +67,8 @@ export async function POST(request: Request) {
       preferredMoveDate: valueOf(formData, "preferredMoveDate"),
       fromAddress: valueOf(formData, "fromAddress"),
       toAddress: valueOf(formData, "toAddress"),
-      propertyType: valueOf(formData, "propertyType"),
+      fromPropertyType: valueOf(formData, "fromPropertyType"),
+      toPropertyType: valueOf(formData, "toPropertyType"),
       moveSize: valueOf(formData, "moveSize")
     },
     access: {

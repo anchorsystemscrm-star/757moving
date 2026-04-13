@@ -59,7 +59,7 @@ export function QuoteForm() {
             Name
           </label>
           <input
-            className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#2c74d8]"
+            className="field-control"
             id="name"
             name="name"
             placeholder="Your full name"
@@ -73,7 +73,7 @@ export function QuoteForm() {
             Phone
           </label>
           <input
-            className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#2c74d8]"
+            className="field-control"
             id="phone"
             name="phone"
             placeholder="Best callback number"
@@ -87,7 +87,7 @@ export function QuoteForm() {
             Email
           </label>
           <input
-            className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#2c74d8]"
+            className="field-control"
             id="email"
             name="email"
             placeholder="you@example.com"
@@ -101,7 +101,7 @@ export function QuoteForm() {
             Move date
           </label>
           <input
-            className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#2c74d8]"
+            className="field-control"
             id="moveDate"
             name="moveDate"
             required
@@ -114,7 +114,7 @@ export function QuoteForm() {
             Property type
           </label>
           <select
-            className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#2c74d8]"
+            className="select-control"
             defaultValue=""
             id="propertyType"
             name="propertyType"
@@ -137,7 +137,7 @@ export function QuoteForm() {
             From address
           </label>
           <input
-            className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#2c74d8]"
+            className="field-control"
             id="fromAddress"
             name="fromAddress"
             placeholder="Current pickup address"
@@ -151,7 +151,7 @@ export function QuoteForm() {
             To address
           </label>
           <input
-            className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#2c74d8]"
+            className="field-control"
             id="toAddress"
             name="toAddress"
             placeholder="Delivery address"
@@ -165,7 +165,7 @@ export function QuoteForm() {
             Bedrooms
           </label>
           <select
-            className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#2c74d8]"
+            className="select-control"
             defaultValue=""
             id="bedrooms"
             name="bedrooms"
@@ -187,7 +187,7 @@ export function QuoteForm() {
             Large items
           </label>
           <input
-            className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#2c74d8]"
+            className="field-control"
             id="largeItems"
             name="largeItems"
             placeholder="Piano, safe, treadmill, etc."
@@ -200,7 +200,7 @@ export function QuoteForm() {
             Stairs
           </label>
           <select
-            className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#2c74d8]"
+            className="select-control"
             defaultValue="No"
             id="stairs"
             name="stairs"
@@ -215,7 +215,7 @@ export function QuoteForm() {
             Elevator
           </label>
           <select
-            className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#2c74d8]"
+            className="select-control"
             defaultValue="No"
             id="elevator"
             name="elevator"
@@ -230,7 +230,7 @@ export function QuoteForm() {
             Notes
           </label>
           <textarea
-            className="min-h-32 w-full rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-[#2c74d8]"
+            className="textarea-control min-h-32"
             id="notes"
             name="notes"
             placeholder="Timing notes, access instructions, inventory highlights, or anything else we should know"
@@ -266,7 +266,7 @@ export function QuoteForm() {
       ) : null}
 
       <button
-        className="mt-6 inline-flex h-12 w-full items-center justify-center rounded-lg bg-[#123a72] px-5 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(18,58,114,0.18)] transition hover:bg-[#0f315f] disabled:cursor-not-allowed disabled:opacity-70"
+        className="button-base button-primary mt-6 w-full"
         disabled={isSubmitting}
         type="submit"
       >
@@ -275,4 +275,3 @@ export function QuoteForm() {
     </form>
   );
 }
-

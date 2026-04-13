@@ -28,6 +28,20 @@ export default function StartQuotePage() {
         title="Start Your Quote"
       />
 
+      <section className="warm-section border-y border-slate-200 py-20">
+        <div className="container-shell grid gap-4 sm:grid-cols-3">
+          {[
+            "More accurate quotes with uploads from both locations",
+            "Clearer move planning with separate property types",
+            "Fast review for local Hampton Roads moves"
+          ].map((point) => (
+            <div key={point} className="small-card px-5 py-5 text-sm font-semibold leading-7 text-slate-800">
+              {point}
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="container-shell py-20">
         <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
           <aside className="space-y-5">
@@ -50,7 +64,7 @@ export default function StartQuotePage() {
               </ul>
             </div>
 
-            <div className="small-card p-7 sm:p-8">
+            <div className="small-card bg-[linear-gradient(180deg,_#fff8f0_0%,_#fbf1e6_100%)] p-7 sm:p-8">
               <h3 className="text-xl font-semibold text-slate-950">Need help right away?</h3>
               <p className="mt-4 text-sm leading-7 text-slate-600">
                 If the move is urgent or you would rather walk through the details live,
@@ -70,4 +84,3 @@ export default function StartQuotePage() {
     </>
   );
 }
-

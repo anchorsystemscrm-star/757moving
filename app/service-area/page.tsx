@@ -26,28 +26,30 @@ export default function ServiceAreaPage() {
         title="Professional movers across Virginia Beach, Norfolk, Chesapeake, Portsmouth, and Suffolk"
       />
 
-      <section className="container-shell py-20">
-        <SectionHeading
-          eyebrow="Hampton Roads Coverage"
-          title="Focused local service, written for real people instead of keyword stuffing"
-          description="We stay local so we can stay responsive. That means tighter scheduling, easier communication, and fewer surprises on moving day."
-        />
-        <div className="mt-12 grid gap-5 lg:grid-cols-2">
-          {citySections.map((section) => (
-            <article key={section.city} className="small-card p-7 sm:p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2c74d8]">
-                {section.city}
-              </p>
-              <h2 className="mt-4 text-2xl font-semibold tracking-tight text-slate-950">
-                {section.title}
-              </h2>
-              <p className="mt-4 text-base leading-8 text-slate-600">{section.copy}</p>
-            </article>
-          ))}
+      <section className="warm-section border-y border-slate-200 py-20">
+        <div className="container-shell">
+          <SectionHeading
+            eyebrow="Hampton Roads Coverage"
+            title="Focused local service, written for real people instead of keyword stuffing"
+            description="We stay local so we can stay responsive. That means tighter scheduling, easier communication, and fewer surprises on moving day."
+          />
+          <div className="mt-12 grid gap-5 lg:grid-cols-2">
+            {citySections.map((section) => (
+              <article key={section.city} className="small-card p-7 sm:p-8">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2c74d8]">
+                  {section.city}
+                </p>
+                <h2 className="mt-4 text-2xl font-semibold tracking-tight text-slate-950">
+                  {section.title}
+                </h2>
+                <p className="mt-4 text-base leading-8 text-slate-600">{section.copy}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="border-y border-slate-200 bg-[#f8fbff] py-20">
+      <section className="tint-section border-y border-slate-200 py-20">
         <div className="container-shell">
           <SectionHeading
             eyebrow="Also Serving"

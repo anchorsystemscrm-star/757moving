@@ -172,7 +172,7 @@ export function StartQuoteIntakeForm() {
             Contact + Move Basics
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-600">
-            Start with the essentials so we can review the move timeline and route.
+            Start with the essentials so we can understand both locations, review the route, and prepare a more accurate estimate.
           </p>
         </div>
 
@@ -182,7 +182,7 @@ export function StartQuoteIntakeForm() {
               Full Name
             </label>
             <input
-              className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#0f4fae]"
+              className="field-control"
               id="fullName"
               name="fullName"
               placeholder="Your full name"
@@ -195,7 +195,7 @@ export function StartQuoteIntakeForm() {
               Phone
             </label>
             <input
-              className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#0f4fae]"
+              className="field-control"
               id="phone"
               name="phone"
               placeholder="Best callback number"
@@ -208,7 +208,7 @@ export function StartQuoteIntakeForm() {
               Email
             </label>
             <input
-              className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#0f4fae]"
+              className="field-control"
               id="email"
               name="email"
               placeholder="you@example.com"
@@ -221,7 +221,7 @@ export function StartQuoteIntakeForm() {
               Preferred Move Date
             </label>
             <input
-              className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#0f4fae]"
+              className="field-control"
               id="preferredMoveDate"
               name="preferredMoveDate"
               required
@@ -233,7 +233,7 @@ export function StartQuoteIntakeForm() {
               From Address
             </label>
             <input
-              className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#0f4fae]"
+              className="field-control"
               id="fromAddress"
               name="fromAddress"
               placeholder="Current address"
@@ -246,7 +246,7 @@ export function StartQuoteIntakeForm() {
               To Address
             </label>
             <input
-              className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#0f4fae]"
+              className="field-control"
               id="toAddress"
               name="toAddress"
               placeholder="New address"
@@ -254,27 +254,59 @@ export function StartQuoteIntakeForm() {
               type="text"
             />
           </div>
-          <div>
-            <label className="mb-2 block text-sm font-semibold text-slate-900" htmlFor="propertyType">
-              Property Type
-            </label>
-            <select
-              className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#0f4fae]"
-              defaultValue=""
-              id="propertyType"
-              name="propertyType"
-              required
-            >
-              <option disabled value="">
-                Select property type
-              </option>
-              <option>Apartment</option>
-              <option>House</option>
-              <option>Townhome</option>
-              <option>Condo</option>
-              <option>Storage Unit</option>
-              <option>Other</option>
-            </select>
+          <div className="sm:col-span-2 rounded-2xl border border-slate-200 bg-[#fff8f0] p-5">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2c74d8]">
+              Property Types
+            </p>
+            <p className="mt-2 text-sm leading-7 text-slate-600">
+              Tell us what type of property you are moving out of and into so we can plan the estimate around both ends of the move.
+            </p>
+            <div className="mt-5 grid gap-5 sm:grid-cols-2">
+              <div>
+                <label className="mb-2 block text-sm font-semibold text-slate-900" htmlFor="fromPropertyType">
+                  From Property Type
+                </label>
+                <select
+                  className="select-control"
+                  defaultValue=""
+                  id="fromPropertyType"
+                  name="fromPropertyType"
+                  required
+                >
+                  <option disabled value="">
+                    Select starting property type
+                  </option>
+                  <option>Apartment</option>
+                  <option>House</option>
+                  <option>Townhome</option>
+                  <option>Condo</option>
+                  <option>Storage Unit</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label className="mb-2 block text-sm font-semibold text-slate-900" htmlFor="toPropertyType">
+                  To Property Type
+                </label>
+                <select
+                  className="select-control"
+                  defaultValue=""
+                  id="toPropertyType"
+                  name="toPropertyType"
+                  required
+                >
+                  <option disabled value="">
+                    Select destination property type
+                  </option>
+                  <option>Apartment</option>
+                  <option>House</option>
+                  <option>Townhome</option>
+                  <option>Condo</option>
+                  <option>Storage Unit</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -329,7 +361,7 @@ export function StartQuoteIntakeForm() {
                 {field.label}
               </label>
               <select
-                className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#0f4fae]"
+                className="select-control"
                 defaultValue=""
                 id={field.name}
                 name={field.name}
@@ -349,7 +381,7 @@ export function StartQuoteIntakeForm() {
               Parking or access notes
             </label>
             <textarea
-              className="min-h-28 w-full rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-[#0f4fae]"
+              className="textarea-control min-h-28"
               id="parkingNotes"
               name="parkingNotes"
               placeholder="Gate codes, loading dock notes, reserved elevator windows, parking distance, or building instructions"
@@ -405,7 +437,7 @@ export function StartQuoteIntakeForm() {
             </p>
           </div>
           <button
-            className="inline-flex h-12 items-center justify-center rounded-lg bg-[#0f4fae] px-6 text-sm font-semibold text-white shadow-[0_20px_44px_rgba(15,79,174,0.28)] transition hover:bg-[#0c428f] disabled:cursor-not-allowed disabled:opacity-70"
+            className="button-base button-primary px-6"
             disabled={isSubmitting}
             type="submit"
           >
@@ -436,4 +468,3 @@ export function StartQuoteIntakeForm() {
     </form>
   );
 }
-

@@ -55,7 +55,7 @@ export function ContactForm() {
             Name
           </label>
           <input
-            className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#2c74d8]"
+            className="field-control"
             id="contact-name"
             name="name"
             placeholder="Your name"
@@ -68,7 +68,7 @@ export function ContactForm() {
             Phone
           </label>
           <input
-            className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#2c74d8]"
+            className="field-control"
             id="contact-phone"
             name="phone"
             placeholder="Best callback number"
@@ -81,7 +81,7 @@ export function ContactForm() {
             Email
           </label>
           <input
-            className="h-12 w-full rounded-lg border border-slate-200 px-4 text-sm text-slate-900 outline-none transition focus:border-[#2c74d8]"
+            className="field-control"
             id="contact-email"
             name="email"
             placeholder="you@example.com"
@@ -94,7 +94,7 @@ export function ContactForm() {
             Message
           </label>
           <textarea
-            className="min-h-32 w-full rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-[#2c74d8]"
+            className="textarea-control min-h-32"
             id="contact-message"
             name="message"
             placeholder="Tell us what you need help with"
@@ -117,7 +117,7 @@ export function ContactForm() {
       ) : null}
 
       <button
-        className="mt-6 inline-flex h-12 w-full items-center justify-center rounded-lg bg-[#123a72] px-5 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(18,58,114,0.18)] transition hover:bg-[#0f315f] disabled:cursor-not-allowed disabled:opacity-70"
+        className="button-base button-primary mt-6 w-full"
         disabled={isSubmitting}
         type="submit"
       >
@@ -126,4 +126,3 @@ export function ContactForm() {
     </form>
   );
 }
-

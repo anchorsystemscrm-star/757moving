@@ -23,8 +23,8 @@ export default function ContactPage() {
         title="Phone-first moving help across the 757"
       />
 
-      <section className="container-shell py-20">
-        <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
+      <section className="warm-section border-y border-slate-200 py-20">
+        <div className="container-shell grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
           <div className="space-y-5">
             <div className="small-card p-7 sm:p-8">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#2c74d8]">
@@ -42,7 +42,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="small-card p-7 sm:p-8">
+            <div className="small-card bg-[linear-gradient(180deg,_#fff8f0_0%,_#fbf1e6_100%)] p-7 sm:p-8">
               <h3 className="text-xl font-semibold text-slate-950">Business hours</h3>
               <ul className="mt-5 space-y-3 text-sm text-slate-600">
                 {siteConfig.hours.map((hour) => (
@@ -70,7 +70,7 @@ export default function ContactPage() {
               eyebrow="Send a Message"
               title="Tell us what you need and we will follow up quickly"
               description="For quote requests with move details, the dedicated quote form is the fastest route. For general questions, use the contact form below."
-            />
+              />
             <div className="mt-8">
               <ContactForm />
             </div>
@@ -80,4 +80,3 @@ export default function ContactPage() {
     </>
   );
 }
-

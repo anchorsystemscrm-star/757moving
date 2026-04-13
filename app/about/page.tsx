@@ -42,35 +42,37 @@ export default function AboutPage() {
         title="A local moving company built around trust, pace, and professionalism"
       />
 
-      <section className="container-shell py-20">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.02fr_0.98fr]">
-          <div>
-            <SectionHeading
-              eyebrow="Our Story"
-              title="We keep local moves feeling organized, responsive, and easier to manage"
-              description="757 Moving was built for people who need real help fast and do not want to gamble on poor communication or unreliable scheduling. We focus on the basics that matter most: show up prepared, communicate clearly, handle belongings with care, and keep the move flowing."
-            />
-            <p className="mt-6 text-base leading-8 text-slate-600">
-              Whether it is an apartment across town, a family home moving day, or a
-              short-notice local relocation, our job is to make the process feel
-              tighter, cleaner, and more dependable than the average moving
-              experience.
-            </p>
-          </div>
-          <div className="relative overflow-hidden rounded-[28px] border border-slate-200 shadow-[0_30px_80px_rgba(15,23,42,0.12)]">
-            <Image
-              alt="Stylish apartment interior prepared for a move"
-              className="h-full w-full object-cover"
-              height={780}
-              sizes="(min-width: 1024px) 42rem, 100vw"
-              src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
-              width={960}
-            />
+      <section className="warm-section border-y border-slate-200 py-20">
+        <div className="container-shell">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.02fr_0.98fr]">
+            <div>
+              <SectionHeading
+                eyebrow="Our Story"
+                title="We keep local moves feeling organized, responsive, and easier to manage"
+                description="757 Moving was built for people who need real help fast and do not want to gamble on poor communication or unreliable scheduling. We focus on the basics that matter most: show up prepared, communicate clearly, handle belongings with care, and keep the move flowing."
+              />
+              <p className="mt-6 text-base leading-8 text-slate-600">
+                Whether it is an apartment across town, a family home moving day, or a
+                short-notice local relocation, our job is to make the process feel
+                tighter, cleaner, and more dependable than the average moving
+                experience.
+              </p>
+            </div>
+            <div className="relative overflow-hidden rounded-[28px] border border-slate-200 shadow-[0_30px_80px_rgba(15,23,42,0.12)]">
+              <Image
+                alt="Stylish apartment interior prepared for a move"
+                className="h-full w-full object-cover"
+                height={780}
+                sizes="(min-width: 1024px) 42rem, 100vw"
+                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
+                width={960}
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="border-y border-slate-200 bg-[#f8fbff] py-20">
+      <section className="tint-section border-y border-slate-200 py-20">
         <div className="container-shell">
           <SectionHeading
             align="center"
@@ -117,4 +119,3 @@ export default function AboutPage() {
     </>
   );
 }
-

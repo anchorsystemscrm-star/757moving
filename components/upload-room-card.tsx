@@ -34,7 +34,7 @@ export function UploadRoomCard({
         </label>
         <input
           accept="image/*,video/*"
-          className="block w-full text-sm text-slate-600 file:mr-4 file:rounded-lg file:border-0 file:bg-[#0f4fae] file:px-4 file:py-2.5 file:text-sm file:font-semibold file:text-white hover:file:bg-[#0c428f]"
+          className="block w-full text-sm text-slate-600 file:mr-4 file:rounded-lg file:border-0 file:bg-[#1b4f93] file:px-4 file:py-2.5 file:text-sm file:font-semibold file:text-white hover:file:bg-[#153f78]"
           id={fileField}
           multiple
           name={fileField}
@@ -53,7 +53,7 @@ export function UploadRoomCard({
           Notes
         </label>
         <textarea
-          className="min-h-24 w-full rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-[#0f4fae]"
+          className="textarea-control min-h-24"
           id={notesField}
           name={notesField}
           placeholder="List fragile pieces, oversized items, packed boxes, or anything worth flagging"
@@ -62,4 +62,3 @@ export function UploadRoomCard({
     </div>
   );
 }
-
