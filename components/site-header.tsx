@@ -60,7 +60,7 @@ export function SiteHeader() {
           >
             {siteConfig.phoneDisplay}
           </a>
-          <ActionLink href="/quote-request">Get Quote</ActionLink>
+          <ActionLink href="/quote-request">Get My Quote</ActionLink>
         </div>
 
         <button
@@ -109,7 +109,7 @@ export function SiteHeader() {
                 href="/quote-request"
                 onClick={() => setMenuOpen(false)}
               >
-                Get Quote
+                Get My Quote
               </ActionLink>
             </div>
           </div>

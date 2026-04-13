@@ -53,14 +53,14 @@ export function HomeLeadForm() {
     >
       <div className="rounded-[20px] border border-slate-200/80 bg-white/80 p-5 shadow-[0_18px_40px_rgba(15,23,42,0.06)]">
         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#2568c2]">
-          Fast follow-up
+          Quick callback request
         </p>
         <h3 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">
-          Send the basics and we&apos;ll take it from there
+          Send the basics and we&apos;ll call you back fast
         </h3>
         <p className="mt-3 text-sm leading-7 text-slate-600">
-          Usually a fast response during business hours. No long form here, just
-          the details we need to help price the move and confirm next steps.
+          No long form here, just the details we need to help price the move,
+          confirm availability, and get the next step handled.
         </p>
       </div>
 
@@ -141,7 +141,7 @@ export function HomeLeadForm() {
       </button>
 
       <p className="mt-4 text-center text-sm text-slate-500">
-        Fast response, usually within minutes during business hours.
+        Fast response - usually within 5-10 minutes during business hours.
       </p>
     </form>
   );

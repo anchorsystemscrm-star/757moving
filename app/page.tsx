@@ -13,12 +13,6 @@ export const metadata = buildMetadata({
   path: "/"
 });
 
-const stats = [
-  { label: "Fast response", value: "Usually within minutes during business hours" },
-  { label: "Availability", value: "Same-day and next-day scheduling options" },
-  { label: "Coverage", value: "Virginia Beach, Norfolk, Chesapeake, and more" }
-] as const;
-
 const trustPoints = [
   "Same-Day & Next-Day Availability",
   "Fast Quote Turnaround",
@@ -83,46 +77,30 @@ export default function HomePage() {
               Same-day and next-day moves available. Book trusted local movers for
               apartments, homes, and short-notice moves across Hampton Roads.
             </p>
+            <div className="mt-6 inline-flex rounded-full border border-white/12 bg-white/8 px-4 py-2 text-sm font-medium text-slate-100 backdrop-blur-md">
+              Limited same-day availability — call now to lock in your spot
+            </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <ActionLink className="sm:min-w-[220px]" href="/quote-request">
+              <ActionLink className="sm:min-w-[230px]" href="/quote-request">
                 Get My Moving Quote
               </ActionLink>
               <ActionLink
-                className="border-white/16 bg-white/10 text-white shadow-[0_16px_36px_rgba(8,18,35,0.22)] hover:border-white/24 hover:bg-white/14 hover:text-white sm:min-w-[220px]"
+                className="border-white/14 bg-white/7 px-5 text-white shadow-[0_12px_30px_rgba(8,18,35,0.18)] hover:border-white/24 hover:bg-white/12 hover:text-white sm:min-w-[220px]"
                 href={siteConfig.phoneHref}
                 variant="secondary"
               >
                 Call Now (Fastest Response)
               </ActionLink>
             </div>
-            <div className="badge-row mt-5">
-              <span className="trust-pill">
-                <span className="trust-pill-dot" />
-                Fast response
-              </span>
-              <span className="trust-pill">
-                <span className="trust-pill-dot" />
-                Same-day / next-day availability
-              </span>
-              <span className="trust-pill">
-                <span className="trust-pill-dot" />
-                Local crews across the 757
-              </span>
-            </div>
-
-            <div className="mt-10 grid gap-3 sm:grid-cols-3">
-              {stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-2xl border border-white/14 bg-white/8 px-4 py-4 backdrop-blur-md"
-                >
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#b8d2ff]">
-                    {stat.label}
-                  </p>
-                  <p className="mt-2 text-sm font-medium text-white">{stat.value}</p>
-                </div>
-              ))}
-            </div>
+            <p className="mt-5 text-sm leading-7 text-slate-200">
+              Or call now for fastest service:{" "}
+              <a
+                className="font-semibold text-white underline decoration-white/35 underline-offset-4 transition hover:decoration-white"
+                href={siteConfig.phoneHref}
+              >
+                {siteConfig.phoneDisplay}
+              </a>
+            </p>
           </div>
         </div>
       </section>
@@ -171,7 +149,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <ActionLink href="/quote-request">Get Free Quote</ActionLink>
+            <ActionLink href="/quote-request">Get My Quote</ActionLink>
             <ActionLink href={siteConfig.phoneHref} variant="secondary">
               Call Now
             </ActionLink>
@@ -240,11 +218,11 @@ export default function HomePage() {
           <div>
             <SectionHeading
               eyebrow="Fast Quote Form"
-              title="Get Your Moving Quote — We’ll Reach Out Fast"
+              title="Get Your Moving Quote — We’ll Call You Within Minutes"
               description="Send the basics and we’ll follow up quickly to help you price your move, confirm availability, and get the next step handled."
             />
             <p className="mt-5 text-sm font-semibold text-[#184784]">
-              Fast response, usually within minutes during business hours.
+              Fast response — usually within 5-10 minutes during business hours.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               <div className="small-card bg-white/90 p-5">
@@ -314,11 +292,22 @@ export default function HomePage() {
           />
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
             {testimonials.map((testimonial) => (
-              <article key={testimonial.name} className="small-card p-6">
-                <p className="text-base leading-8 text-slate-700">“{testimonial.quote}”</p>
+              <article
+                key={testimonial.name}
+                className="small-card bg-[linear-gradient(180deg,_rgba(255,252,248,0.98)_0%,_rgba(247,241,233,0.96)_100%)] p-6"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="inline-flex rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#2568c2]">
+                    Hampton Roads move
+                  </div>
+                  <span className="text-4xl font-semibold leading-none text-[#b7cdef]">“</span>
+                </div>
+                <p className="mt-5 text-base leading-8 text-slate-700">{testimonial.quote}”</p>
                 <div className="mt-6 border-t border-slate-200 pt-5">
-                  <p className="text-sm font-semibold text-slate-950">{testimonial.name}</p>
-                  <p className="text-sm text-slate-500">{testimonial.location}</p>
+                  <p className="text-base font-semibold text-slate-950">{testimonial.name}</p>
+                  <p className="mt-1 text-sm font-medium text-slate-500">
+                    Local move in {testimonial.location}
+                  </p>
                 </div>
               </article>
             ))}
@@ -364,7 +353,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <ActionLink href="/quote-request">Get Free Quote</ActionLink>
+              <ActionLink href="/quote-request">Get My Quote</ActionLink>
               <ActionLink href={siteConfig.phoneHref} variant="secondary">
                 Call Now
               </ActionLink>

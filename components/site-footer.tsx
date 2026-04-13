@@ -7,19 +7,19 @@ import { siteConfig } from "@/lib/site";
 export function SiteFooter() {
   return (
     <footer className="border-t border-slate-200 bg-slate-950 text-slate-200">
-      <div className="container-shell grid gap-12 py-14 lg:grid-cols-[1.15fr_0.85fr_0.9fr]">
+      <div className="container-shell grid gap-10 py-12 lg:grid-cols-[1.12fr_0.82fr_0.9fr]">
         <div className="max-w-md">
           <Link className="inline-flex items-center" href="/">
             <Image
               src="/757moving-logo.png"
               alt="757 Moving logo"
-              width={118}
-              height={36}
-              sizes="118px"
-              className="mb-4 h-auto w-[110px] object-contain sm:w-[118px]"
+              width={106}
+              height={32}
+              sizes="106px"
+              className="mb-3 h-auto w-[100px] object-contain sm:w-[106px]"
             />
           </Link>
-          <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white sm:text-[1.9rem]">
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-[1.8rem]">
             Local movers built for speed, trust, and clean communication.
           </h2>
           <p className="mt-4 text-sm leading-7 text-slate-400">
@@ -27,7 +27,7 @@ export function SiteFooter() {
             homes, same-day requests, and loading help that keeps the day on track.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <ActionLink href="/quote-request">Get Free Quote</ActionLink>
+            <ActionLink href="/quote-request">Get My Quote</ActionLink>
             <ActionLink href={siteConfig.phoneHref} variant="secondary">
               {siteConfig.phoneDisplay}
             </ActionLink>
@@ -63,14 +63,14 @@ export function SiteFooter() {
               <li key={city}>{city}</li>
             ))}
           </ul>
-          <div className="mt-6 space-y-2 text-sm text-slate-400">
+          <div className="mt-5 space-y-2 text-sm text-slate-400">
             <p>{siteConfig.email}</p>
             <p>{siteConfig.phoneDisplay}</p>
             <p>Daily scheduling across the 757 area.</p>
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 py-5">
+      <div className="border-t border-white/10 py-4">
         <div className="container-shell flex flex-col gap-3 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
           <p>Built for local lead generation and fast quote requests.</p>

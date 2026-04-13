@@ -189,29 +189,3 @@ img {
   box-shadow: 0 0 0 3px rgba(27, 79, 147, 0.12);
   background: rgba(255, 255, 255, 0.98);
 }
-
-.badge-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.trust-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.08);
-  padding: 0.65rem 0.9rem;
-  color: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(12px);
-}
-
-.trust-pill-dot {
-  height: 0.5rem;
-  width: 0.5rem;
-  border-radius: 999px;
-  background: #87b6ff;
-  box-shadow: 0 0 0 4px rgba(135, 182, 255, 0.14);
-}
