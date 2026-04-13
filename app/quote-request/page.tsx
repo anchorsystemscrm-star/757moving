@@ -28,7 +28,7 @@ export default function QuoteRequestPage() {
       />
 
       <section className="warm-section border-y border-slate-200 py-20">
-        <div className="grid gap-8 lg:grid-cols-[1.02fr_0.98fr]">
+        <div className="container-shell grid gap-8 lg:grid-cols-[1.02fr_0.98fr]">
           <div className="small-card p-8 sm:p-10">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#2c74d8]">
               How It Works

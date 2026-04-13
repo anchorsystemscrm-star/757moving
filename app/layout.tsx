@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   publisher: siteConfig.name,
   keywords: siteConfig.keywords,
   category: "Home Services",
+  icons: {
+    icon: "/757moving-logo.png",
+    shortcut: "/757moving-logo.png",
+    apple: "/757moving-logo.png"
+  },
   formatDetection: {
     email: true,
     address: false,
@@ -42,4 +47,3 @@ export default function RootLayout({
     </html>
   );
 }
-

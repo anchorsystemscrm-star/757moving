@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -15,18 +16,20 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-white/88 backdrop-blur-xl">
       <div className="container-shell flex h-[72px] items-center justify-between gap-4 py-4">
-        <Link className="flex items-center gap-3" href="/" onClick={() => setMenuOpen(false)}>
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#123a72] text-sm font-bold text-white shadow-[0_12px_24px_rgba(18,58,114,0.2)]">
-            757
-          </div>
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">
-              Hampton Roads Movers
-            </p>
-            <p className="text-lg font-semibold tracking-tight text-slate-950">
-              757 Moving
-            </p>
-          </div>
+        <Link
+          className="flex items-center"
+          href="/"
+          onClick={() => setMenuOpen(false)}
+        >
+          <Image
+            src="/757moving-logo.png"
+            alt="757 Moving logo"
+            width={160}
+            height={50}
+            priority
+            sizes="(max-width: 640px) 132px, (max-width: 1024px) 148px, 160px"
+            className="h-auto w-[132px] object-contain sm:w-[148px] lg:w-[160px]"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">
@@ -115,4 +118,3 @@ export function SiteHeader() {
     </header>
   );
 }
-

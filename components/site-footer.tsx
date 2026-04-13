@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { ActionLink } from "@/components/action-link";
@@ -8,9 +9,16 @@ export function SiteFooter() {
     <footer className="border-t border-slate-200 bg-slate-950 text-slate-200">
       <div className="container-shell grid gap-12 py-14 lg:grid-cols-[1.3fr_0.8fr_0.9fr]">
         <div className="max-w-md">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#7fb0ff]">
-            757 Moving
-          </p>
+          <Link className="inline-flex items-center" href="/">
+            <Image
+              src="/757moving-logo.png"
+              alt="757 Moving logo"
+              width={140}
+              height={45}
+              sizes="140px"
+              className="mb-4 h-auto w-[132px] object-contain sm:w-[140px]"
+            />
+          </Link>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white">
             Local movers built for speed, trust, and clean communication.
           </h2>
@@ -64,7 +72,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-white/10 py-5">
         <div className="container-shell flex flex-col gap-3 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} 757 Moving. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
           <p>Built for local lead generation and fast quote requests.</p>
         </div>
       </div>

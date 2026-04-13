@@ -70,8 +70,19 @@ export default function HomePage() {
 
         <div className="container-shell relative z-10 flex min-h-[82svh] items-center py-16">
           <div className="max-w-3xl text-white">
-            <p className="text-sm font-semibold uppercase tracking-[0.26em] text-[#b8d2ff]">
-              Premium local movers in Hampton Roads
+            <div className="inline-flex rounded-2xl border border-white/15 bg-white/10 px-4 py-3 shadow-[0_20px_40px_rgba(15,23,42,0.18)] backdrop-blur-md">
+              <Image
+                src="/757moving-logo.png"
+                alt="757 Moving logo"
+                width={164}
+                height={52}
+                priority
+                sizes="(max-width: 640px) 136px, 164px"
+                className="h-auto w-[136px] object-contain sm:w-[164px]"
+              />
+            </div>
+            <p className="mt-6 text-sm font-semibold uppercase tracking-[0.26em] text-[#b8d2ff]">
+              Local moving across Virginia Beach, Norfolk, and the 757
             </p>
             <h1 className="mt-5 text-5xl font-semibold tracking-tight sm:text-6xl">
               Local Movers in Hampton Roads — Fast Quotes, Reliable Crews, Short-Notice Availability
