@@ -14,6 +14,11 @@ type IntakeResponse = {
   message: string;
 };
 
+type RoomUploadItem = {
+  id: string;
+  file: File;
+};
+
 const progressSteps = [
   "Contact + Move Basics",
   "Move Size",
@@ -79,10 +84,43 @@ const uploadSections = [
   }
 ] as const;
 
+type UploadField = (typeof uploadSections)[number]["fileField"];
+
+function createEmptyRoomUploads() {
+  return Object.fromEntries(
+    uploadSections.map((section) => [section.fileField, [] as RoomUploadItem[]])
+  ) as Record<UploadField, RoomUploadItem[]>;
+}
+
 export function StartQuoteIntakeForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [feedback, setFeedback] = useState<IntakeResponse | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [roomUploads, setRoomUploads] = useState(createEmptyRoomUploads);
+
+  function handleFilesAdd(field: UploadField, files: File[]) {
+    if (!files.length) {
+      return;
+    }
+
+    setRoomUploads((current) => ({
+      ...current,
+      [field]: [
+        ...current[field],
+        ...files.map((file) => ({
+          id: `${field}-${crypto.randomUUID()}`,
+          file
+        }))
+      ]
+    }));
+  }
+
+  function handleFileRemove(field: UploadField, fileId: string) {
+    setRoomUploads((current) => ({
+      ...current,
+      [field]: current[field].filter((entry) => entry.id !== fileId)
+    }));
+  }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -91,6 +129,14 @@ export function StartQuoteIntakeForm() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+
+    uploadSections.forEach((section) => {
+      formData.delete(section.fileField);
+
+      roomUploads[section.fileField].forEach((entry) => {
+        formData.append(section.fileField, entry.file);
+      });
+    });
 
     try {
       const response = await fetch("/api/start-quote", {
@@ -108,6 +154,7 @@ export function StartQuoteIntakeForm() {
       setSubmitted(true);
       setFeedback(result);
       form.reset();
+      setRoomUploads(createEmptyRoomUploads());
     } catch {
       setFeedback({
         ok: false,
@@ -409,7 +456,12 @@ export function StartQuoteIntakeForm() {
               key={section.title}
               description={section.description}
               fileField={section.fileField}
+              files={roomUploads[section.fileField]}
               notesField={section.notesField}
+              onFilesAdd={(field, files) => handleFilesAdd(field as UploadField, files)}
+              onFileRemove={(field, fileId) =>
+                handleFileRemove(field as UploadField, fileId)
+              }
               title={section.title}
             />
           ))}
